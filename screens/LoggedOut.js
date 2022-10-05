@@ -10,18 +10,25 @@ export default class LoggedOut extends Component {
         <View style={styles.welcomeWrapper}>
           <Image
             style={styles.logo}
-            source={require("../assets/logo.png")}
+            source={require("../assets/logo.jpg")}
           />
           <Text style={styles.welcomeText}>
             Welcome to PayMyPark application !
           </Text>
           <RoundedButton
+             text="Connect" 
+             textColor={colors.green01}
+             backgroundColor= '#AFA5DE'
+          />
+          <RoundedButton
              text="Connect to Facebook" 
              textColor={colors.green01}
-             backgroundColor= '#8fc1e3' 
+             backgroundColor= '#AFA5DE' 
              icon={<Icon name="facebook" size={20} />}
           />
-          <RoundedButton text="Create Account" textColor={colors.white} />
+          <RoundedButton text="Create Account" 
+            textColor={colors.white}
+            backgroundColor= '#AFA5DE'  />
           <TouchableHighlight
             style={styles.moreOptionsButton}
             onPress={this.onMoreOptionsPress}
@@ -61,7 +68,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 2,
     display: "flex",
-    backgroundColor: '#8fc1e3' 
+    backgroundColor: '#19233D' 
   },
   welcomeWrapper: {
     flex: 2,
@@ -77,7 +84,7 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 20,
-    color: '#000000',
+    color: "#F2F0F9",
     fontWeight: "300",
     marginBottom: 40
   },
@@ -85,7 +92,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   moreOptionsButtonText: {
-    color: colors.white,
+    color: "#F2F0F9",
     fontSize: 16,
   },
   termsAndConditions: {
@@ -95,7 +102,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   termsText: {
-    color: colors.white,
+    color: "#F2F0F9",
     fontSize: 16,
     fontWeight: '600',
   },
